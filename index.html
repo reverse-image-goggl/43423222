@@ -8,7 +8,6 @@
 <link rel="shortcut icon" href="TemplateData/favicon.ico"/>
 <link rel="stylesheet" href="TemplateData/style.css"/>
 <!-- Yandex Games SDK -->
-<script src="/sdk.js"></script>
 <script src="https://app-221307.games.s3.yandex.net/sdk/_/v2.ee602b62545945799654.js"></script>
 </head>
 <body>
@@ -107,26 +106,43 @@
       }
 
       loadingBar.style.display = "block";
+    let StartUnityInstance;
 
 	  var myGameInstance = null;
 
-      var script = document.createElement("script");
-      script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-		
-		  myGameInstance = unityInstance;
-          loadingBar.style.display = "none";
-          //fullscreenButton.onclick = () => {
-            //unityInstance.SetFullscreen(1);
-          //};
-        }).catch((message) => {
-          alert(message);
-        });
-      };
-      document.body.appendChild(script);
+        const script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            StartUnityInstance = function () {
+                createUnityInstance(canvas, config, (progress) => {
+                    spinner.style.display = "none";
+                    progressBarEmpty.style.display = "";
+                    progressBarFull.style.width = `${100 * progress}%`;
+                }).then((unityInstance) => {
+                    myGameInstance = unityInstance;
+                    loadingCover.style.display = "none";
+                }).catch((message) => {
+                    console.error(message);
+                });
+            };
+            if (LocalHost())
+                StartUnityInstance_IfUnloaded();
+        };
+
+        function StartUnityInstance_IfUnloaded() {
+            if (spinner.style.display !== "none")
+                StartUnityInstance();
+        }
+
+        function LocalHost() {
+            var host = window.location.hostname;
+            if (host == "localhost" || host == "127.0.0.1")
+                return true;
+            else return false;
+        }
+
+        setTimeout(StartUnityInstance_IfUnloaded, 5000);
+        
     </script>
 </body>
 </html>

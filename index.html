@@ -108,7 +108,14 @@
       loadingBar.style.display = "block";
     let StartUnityInstance;
 
-	  var myGameInstance = null;
+        let StartUnityInstance;
+        let myGameInstance = null;
+        let ysdk = null;
+        let player = null;
+        let leaderboard;
+        let payments = null;
+        let initGame = false;
+        let nowFullAdOpen = false;
 
         const script = document.createElement("script");
         script.src = loaderUrl;

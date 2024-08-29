@@ -7,7 +7,7 @@
 <link rel="shortcut icon" href="TemplateData/favicon.ico"/>
 <link rel="stylesheet" href="TemplateData/style.css"/>
 <!-- Yandex Games SDK -->
-<script src="https://app-221307.games.s3.yandex.net/sdk/_/v2.ee602b62545945799654.js"></script>
+<script src="https://app-221307.games.s3.yandex.net/sdk.js"></script>
 </head>
 <body>
 <div id="unity-container" style="position: absolute; width: 100%; height: 100%; left: 0%; top: 0%;">
@@ -91,6 +91,7 @@
 
     loadingBar.style.display = "block";
 
+    // Declare and initialize myGameInstance
     var myGameInstance = null;
 
     var script = document.createElement("script");
@@ -102,10 +103,23 @@
         myGameInstance = unityInstance;
         loadingBar.style.display = "none";
       }).catch((message) => {
-        alert(message);
+        console.error('Failed to create Unity instance:', message);
+        unityShowBanner('Failed to load the game.', 'error');
       });
     };
+    script.onerror = (error) => {
+      console.error('Failed to load Unity loader script:', error);
+      unityShowBanner('Failed to load game resources.', 'error');
+    };
     document.body.appendChild(script);
+
+    // Additional check to see if myGameInstance is properly set
+    setTimeout(() => {
+      if (myGameInstance === null) {
+        console.warn('myGameInstance is not initialized');
+        unityShowBanner('Game instance is not initialized properly.', 'warning');
+      }
+    }, 3000); // Adjust timeout as needed
   });
 </script>
 </body>

@@ -104,6 +104,49 @@
         };
 
         InitYandex();
+        function InitYandex() {
+            YaGames.init()
+                .then(ysdk => {
+                    console.log('Init Yandex SDK');
+                    window.ysdk = ysdk;
+                    InitPayments();
+
+                    try {
+                        ysdk.shortcut.canShowPrompt().then(prompt => {
+                            if (prompt.canShow) {
+                                promptCanShow = false;
+                            }
+                        });
+                    } catch (e) {
+                        console.error('CRASH canShowPrompt: ', e.message);
+                    }
+
+                    try {
+                        ysdk.feedback.canReview().then(({ value, reason }) => {
+                            if (value) {
+                                reviewCanShow = false;
+                            } else {
+                                console.log('reviewCanShow = false', reason)
+                            }
+                        })
+
+                        ysdk.shortcut.canShowPrompt().then(prompt => {
+                            if (prompt.canShow) {
+                                promptCanShow = false;
+                            }
+                        });
+                    } catch (e) {
+                        console.error('CRASH canShowFeedback: ', e.message);
+                    }
+
+                    // First ad false
+
+                    if (initGame) {
+                        InitPlayer(photoSize, scopes);
+                    }
+                    initSDK = false;
+                });
+        }
 
         function InitGame(photoSize, scopes, gameReadyApi) {
             console.log('Init GAME');

@@ -9,7 +9,6 @@
 <link rel="shortcut icon" href="TemplateData/favicon.ico"/>
 <link rel="stylesheet" href="TemplateData/style.css"/>
 <!-- Yandex Games SDK -->
-<script src="/sdk.js"></script>
 <script src="https://app-239829.games.s3.yandex.net/sdk/_/v2.ee602b62545945799654.js"></script>
 </head>
 <body class="dark">
@@ -101,9 +100,55 @@
         });
     };
 
+    YaGames.init()
+        .then(ysdk => {
+            console.log('Init Yandex SDK');
+            window.ysdk = ysdk;
+            initSDK = false;
+            InitPayments();
+
+            try {
+                ysdk.shortcut.canShowPrompt().then(prompt => {
+                    if (prompt.canShow) {
+                        promptCanShow = true;
+                    }
+                });
+            } catch (e) {
+                console.error('CRASH canShowPrompt: ', e.message);
+            }
+
+            try {
+                ysdk.feedback.canReview().then(({ value, reason }) => {
+                    if (value) {
+                        reviewCanShow = true;
+                    } else {
+                        console.log('reviewCanShow = false', reason)
+                    }
+                })
+
+                ysdk.shortcut.canShowPrompt().then(prompt => {
+                    if (prompt.canShow) {
+                        promptCanShow = true;
+                    }
+                });
+            } catch (e) {
+                console.error('CRASH canShowFeedback: ', e.message);
+            }
+
+            if (initGame == true) {
+                InitSDK(photoSizeForInit, scopesForInit)
+                if (firstAd)
+                    FullscreenShow();
+            }
+            else {
+                if (firstAd)
+                    ysdk.adv.showFullscreenAdv();
+            }
+        });
+
     function InitSDK(photoSize, scopes) {
         console.log('Init GAME');
-        initGame = true;
+        initGame = false;
         photoSizeForInit = photoSize;
         scopesForInit = scopes;
 

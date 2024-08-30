@@ -101,7 +101,46 @@
         });
     };
 
- 
+        InitYSDK();
+        async function InitYSDK() {
+            try {
+                if (LocalHost()) return;
+
+                console.log('Init Yandex SDK');
+                ysdk = await YaGames.init();
+
+                InitPayments();
+                // First ad false
+
+                // Additional init modules
+cloudSaves = await LoadCloud();
+console.log('Init Storage ysdk');
+
+environmentData = await RequestingEnvironmentData();
+console.log('Init Envir ysdk');
+
+playerData = await InitPlayer();
+console.log('Init Player ysdk');
+
+flasgsData = await GetFlags();
+console.log('Init Flags ysdk');
+
+
+            } catch (e) {
+                console.error('CRASH Initialization SDK: ', e);
+            }
+
+            StartUnityInstance_IfUnloaded();
+        }
+
+        function InitGame() {
+            console.log('Init Game Success');
+            initGame = true;
+
+            if (nowFullAdOpen == true && myGameInstance != null) {
+                myGameInstance.SendMessage('YandexGame', 'OpenFullAd');
+            }
+        }
 
     function NotAuthorized() {
         try {

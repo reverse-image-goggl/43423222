@@ -1,638 +1,732 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
-<head><meta http-equiv="Content-Security-Policy" content="child-src 'self' *.allwebgames.com *.playhop.com *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: playhop.com yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; connect-src 'self' *.allwebgames.com *.eponesh.com *.gameanalytics.com *.playhop.com *.unity3d.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.net *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: playhop.com storage.yandexcloud.net wss://*.eponesh.com:* www.google-analytics.com www.googletagmanager.com yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yandexmetrica.com yastatic.net; default-src 'self'; font-src 'self' *.allwebgames.com *.playhop.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com data: fonts.gstatic.com playhop.com storage.yandexcloud.net yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastat.net yastatic.net; frame-src 'self' *.allwebgames.com *.playhop.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com localhost playhop.com yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastatic.net; img-src 'self' *.allwebgames.com *.eponesh.com *.playhop.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.net *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: playhop.com storage.yandexcloud.net yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastatic.net; media-src 'self' *.allwebgames.com *.playhop.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.net *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: playhop.com storage.yandexcloud.net yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; object-src 'self' *.allwebgames.com *.playhop.com *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: playhop.com yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.allwebgames.com *.eponesh.com *.gameanalytics.com *.playhop.com *.website.yandexcloud.net *.ya.ru *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz abt.s3.yandex.net allwebgames.com blob: data: playhop.com storage.yandexcloud.net www.google-analytics.com www.googletagmanager.com ya.ru yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastatic.net; style-src 'self' 'unsafe-eval' 'unsafe-inline' *.allwebgames.com *.playhop.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: fonts.googleapis.com playhop.com storage.yandexcloud.net yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; worker-src 'self' *.allwebgames.com *.playhop.com *.website.yandexcloud.net *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: playhop.com storage.yandexcloud.net yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz"/>
+<head><meta http-equiv="Content-Security-Policy" content="child-src 'self' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: gametok.com juegocasa.com playhop.com wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; connect-src 'self' *.allwebgames.com *.eponesh.com *.gameanalytics.com *.gametok.com *.juegocasa.com *.playhop.com *.unity3d.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.net *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de wss://*.eponesh.com:* www.google-analytics.com www.googletagmanager.com yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yandexmetrica.com yastatic.net; default-src 'self'; font-src 'self' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com data: fonts.gstatic.com gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastat.net yastatic.net; frame-src 'self' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com gametok.com juegocasa.com localhost playhop.com wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastatic.net; img-src 'self' *.allwebgames.com *.eponesh.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.net *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastatic.net; media-src 'self' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.net *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; object-src 'self' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: gametok.com juegocasa.com playhop.com wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; script-src 'self' 'unsafe-eval' 'unsafe-inline' *.allwebgames.com *.eponesh.com *.gameanalytics.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.ya.ru *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz abt.s3.yandex.net allwebgames.com blob: data: gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de www.google-analytics.com www.googletagmanager.com ya.ru yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz yastatic.net; style-src 'self' 'unsafe-eval' 'unsafe-inline' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: data: fonts.googleapis.com gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz; worker-src 'self' *.allwebgames.com *.gametok.com *.juegocasa.com *.playhop.com *.website.yandexcloud.net *.wowspiele.de *.yandex.az *.yandex.by *.yandex.co.il *.yandex.com *.yandex.com.am *.yandex.com.ge *.yandex.com.tr *.yandex.ee *.yandex.fr *.yandex.kg *.yandex.kz *.yandex.lt *.yandex.lv *.yandex.md *.yandex.ru *.yandex.tj *.yandex.tm *.yandex.ua *.yandex.uz allwebgames.com blob: gametok.com juegocasa.com playhop.com storage.yandexcloud.net wowspiele.de yandex.az yandex.by yandex.co.il yandex.com yandex.com.am yandex.com.ge yandex.com.tr yandex.ee yandex.fr yandex.kg yandex.kz yandex.lt yandex.lv yandex.md yandex.ru yandex.tj yandex.tm yandex.ua yandex.uz"/>
 <meta charset="utf-8"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
-<title>Shaker</title>
-<link rel="shortcut icon" href="TemplateData/favicon.ico"/>
-<link rel="stylesheet" href="TemplateData/style.css"/>
-<!-- Yandex Games SDK -->
-<script src="/sdk.js"></script>,
-<script src="https://app-239829.games.s3.yandex.net/sdk/_/v2.ee602b62545945799654.js"></script>
+<title>Falling Crowd</title>
+<style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                padding: 0px;
+                margin: 0px;
+            }
+            .fullscreen {
+                background: #383838;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            #banner-container {
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 90px;
+            }
+            #loading-overlay {
+                font-size: 20px;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #icon {
+                max-width: 120px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+            #progress-bar {
+                border-radius: 5px;
+                width: 90%;
+                max-width: 250px;
+                height: 20px;
+                background: #242424;
+                padding: 5px;
+            }
+            #progress-bar-fill {
+                border-radius: 3px;
+                width: 0%;
+                height: 100%;
+                background: #FF9A00;
+            }
+        </style>
 </head>
-<body class="dark">
-<div id="unity-container" class="unity-desktop">
-<canvas id="unity-canvas"></canvas>
-</div>
-<div id="loading-cover" style="display:none;">
-<div id="unity-loading-bar">
-<div id="unity-logo"><img src="logo.png"/></div>
-<div id="unity-progress-bar-empty" style="display: none;">
-<div id="unity-progress-bar-full"></div>
-</div>
-<div class="spinner"></div>
-</div>
+<body>
+<canvas id="canvas" class="fullscreen"></canvas>
+<div id="banner-container" style="display: none"></div>
+<div id="loading-overlay" class="fullscreen">
+<img id="icon" src="./icon.png"/>
+<div id="progress-bar"><div id="progress-bar-fill"></div></div>
 </div>
 <script>
-    const hideFullScreenButton = "";
-    const buildUrl = "Build";
-    const loaderUrl = buildUrl + "/7.loader.js";
-    const config = {
-        dataUrl: buildUrl + "/7.data.unityweb",
-        frameworkUrl: buildUrl + "/7.framework.js.unityweb",
-        codeUrl: buildUrl + "/7.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "Shaker",
-        productVersion: "0.1",
-    };
-
-    const container = document.querySelector("#unity-container");
-    const canvas = document.querySelector("#unity-canvas");
-    const loadingCover = document.querySelector("#loading-cover");
-    const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-    const progressBarFull = document.querySelector("#unity-progress-bar-full");
-    const spinner = document.querySelector('.spinner');
-
-    const canFullscreen = (function () {
-        for (const key of [
-            'exitFullscreen',
-            'webkitExitFullscreen',
-            'webkitCancelFullScreen',
-            'mozCancelFullScreen',
-            'msExitFullscreen',
-        ]) {
-            if (key in document) {
-                return true;
-            }
-        }
-        return false;
-    }());
-
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        container.className = "unity-mobile";
-        
-    }
-
-    
-    canvas.style.background = "url('background.png') center / cover";
-
-    loadingCover.style.display = "";
-
-    canvas.addEventListener("touchstart", () => { window.focus() });
-    canvas.addEventListener("pointerdown", () => { window.focus() }); 
-
-    let player;
-    let leaderboard;
-    let myGameInstance = null;
-    let payments = null;
-    let promptCanShow = false;
-    let reviewCanShow = false;
-    let initSDK = false;
-    let initGame = false;
-    let photoSizeForInit;
-    let scopesForInit;
-    let firstAd = true;
-
-    const script = document.createElement("script");
-    script.src = loaderUrl;
-    script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-            spinner.style.display = "none";
-            progressBarEmpty.style.display = "";
-            progressBarFull.style.width = `${100 * progress}%`;
-        }).then((unityInstance) => {
-            myGameInstance = unityInstance;
-            loadingCover.style.display = "none";
-        }).catch((message) => {
-            alert(message);
-        });
-    };
-
-    YaGames.init()
-        .then(ysdk => {
-            console.log('Init Yandex SDK');
-            window.ysdk = ysdk;
-            initSDK = true;
-            InitPayments();
-
-            try {
-                ysdk.shortcut.canShowPrompt().then(prompt => {
-                    if (prompt.canShow) {
-                        promptCanShow = true;
-                    }
-                });
-            } catch (e) {
-                console.error('CRASH canShowPrompt: ', e.message);
+            if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+                let meta = document.createElement('meta')
+                meta.name = 'viewport'
+                meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes'
+                document.getElementsByTagName('head')[0].appendChild(meta)
             }
 
-            try {
-                ysdk.feedback.canReview().then(({ value, reason }) => {
-                    if (value) {
-                        reviewCanShow = true;
-                    } else {
-                        console.log('reviewCanShow = false', reason)
-                    }
-                })
+            let canvas = document.getElementById('canvas')
+            let loadingOverlay = document.getElementById('loading-overlay')
+            let progressBarFill = document.getElementById('progress-bar-fill')
+            let bannerContainer = document.getElementById('banner-container')
 
-                ysdk.shortcut.canShowPrompt().then(prompt => {
-                    if (prompt.canShow) {
-                        promptCanShow = true;
-                    }
-                });
-            } catch (e) {
-                console.error('CRASH canShowFeedback: ', e.message);
+            const STORAGE_DATA_SEPARATOR = '{bridge_data_separator}'
+            const STORAGE_KEYS_SEPARATOR = '{bridge_keys_separator}'
+            const STORAGE_VALUES_SEPARATOR = '{bridge_values_separator}'
+            
+            
+            // utils
+            window.unityInstance = null
+            let progressBarFillingInterval = null
+
+            function sendMessageToUnity(name, value) {
+                if (window.unityInstance !== null) {
+                    window.unityInstance.SendMessage('Bridge', name, value)
+                }
             }
 
-            if (initGame == true) {
-                InitSDK(photoSizeForInit, scopesForInit)
-                if (firstAd)
-                    FullscreenShow();
-            }
-            else {
-                if (firstAd)
-                    ysdk.adv.showFullscreenAdv();
-            }
-        });
-
-    function InitSDK(photoSize, scopes) {
-        console.log('Init GAME');
-        initGame = true;
-        photoSizeForInit = photoSize;
-        scopesForInit = scopes;
-
-        if (initSDK == true) {
-            ysdk.features.LoadingAPI?.ready();
-            InitPlayer(photoSize, scopes);
-        }
-    }
-
-    function NotAuthorized() {
-        try {
-            console.log('Authorized failed');
-            let authJson = {
-                "playerAuth": "rejected",
-                "playerName": "unauthorized",
-                "playerId": "unauthorized",
-                "playerPhoto": "null"
-            };
-            myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', JSON.stringify(authJson));
-        } catch (e) {
-            console.error('CRASH Not Authorized: ', e.message);
-        }
-    }
-
-    function InitPlayer(photoSize, _scopes) {
-        try {
-            return ysdk.getPlayer({scopes: _scopes}).then(_player => {
-
-                player = _player;
-
-                let playerName = player.getName();
-                let playerPhoto = player.getPhoto(photoSize);
-
-                if (!_scopes) {
-                    playerName = "anonymous";
-                    playerPhoto = "null";
+            function onUnityLoadingProgressChanged(progress) {
+                if (progress === 0.9) {
+                    completeProgressBarFilling()
+                    return
                 }
 
-                if (player.getMode() === 'lite') {
+                progressBarFill.style.width = `${ progress * 100 }%`
+                if (progress === 1 && progressBarFillingInterval !== null) {
+                    clearInterval(progressBarFillingInterval)
+                    progressBarFillingInterval = null
+                }
+            }
+            
+            function completeProgressBarFilling() {
+                if (progressBarFillingInterval !== null) {
+                    return
+                }
 
-                    console.log('Not Authorized');
-                    NotAuthorized();
+                let currentPercent = 90
+                progressBarFill.style.width = `${ currentPercent }%`
+                progressBarFillingInterval = setInterval(() => {
+                    currentPercent++
+                    if (currentPercent > 100) {
+                        currentPercent = 100
+                    }
+
+                    progressBarFill.style.width = `${ currentPercent }%`
+
+                    if (currentPercent >= 100) {
+                        clearInterval(progressBarFillingInterval)
+                        progressBarFillingInterval = null
+                        return
+                    }
+                }, 100)
+            }
+
+            window.addEventListener('pointerdown', () => {
+                window.focus()
+                canvas.focus()
+            })
+
+
+            let bridgeOptions = {
+                platforms: {
+                }
+            }
+
+            // initialization
+            bridge
+                .initialize(bridgeOptions)
+                .then(() => {
+                    bridge.advertisement.on('banner_state_changed', state => sendMessageToUnity('OnBannerStateChanged', state))
+                    bridge.advertisement.on('interstitial_state_changed', state => sendMessageToUnity('OnInterstitialStateChanged', state))
+                    bridge.advertisement.on('rewarded_state_changed', state => sendMessageToUnity('OnRewardedStateChanged', state))
+                    bridge.game.on('visibility_state_changed', state => sendMessageToUnity('OnVisibilityStateChanged', state))
+
+                    if (bridge.platform.id === bridge.PLATFORM_ID.YANDEX || bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
+                        bridge.advertisement.showInterstitial()
+                    }
+
+                    let unityLoader = document.createElement('script')
+                    unityLoader.src = 'Build/7.loader.js'
+                    unityLoader.onload = () => {
+                        createUnityInstance(
+                            canvas,
+                            {
+                                dataUrl: 'Build/7.data.unityweb',
+                                frameworkUrl: 'Build/framework.js.unityweb',
+                                codeUrl: 'Build/7.wasm.unityweb',
+                                streamingAssetsUrl: 'StreamingAssets',
+                                companyName: 'Maracoon',
+                                productName: 'Falling Crowd',
+                                productVersion: '1.04',
+                                // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+                                // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+                            },
+                            onUnityLoadingProgressChanged)
+                            .then((unityInstance) => {
+                                window.unityInstance = unityInstance
+                                loadingOverlay.remove()
+                                canvas.focus()
+                            })
+                            .catch((error) => {
+                                console.error(error)
+                            })
+                    }
+                    document.body.appendChild(unityLoader)
+                })
+                .catch(error => console.error(error))
+            
+
+            // platform
+            window.getPlatformId = function() {
+                return bridge.platform.id
+            }
+
+            window.getPlatformLanguage = function() {
+                return bridge.platform.language
+            }
+
+            window.getPlatformPayload = function() {
+                let payload = bridge.platform.payload
+                if (typeof payload === 'string') {
+                    return payload
                 } else {
-                    let authJson = {
-                        "playerAuth": "resolved",
-                        "playerName": playerName,
-                        "playerId": player.getUniqueID(),
-                        "playerPhoto": playerPhoto
-                    };
-                    myGameInstance.SendMessage('YandexGame', 'SetInitializationSDK', JSON.stringify(authJson));
-                    window.focus();
+                    return ''
                 }
-            }).catch(e => {
-                console.error('Authorized err: ', e.message);
-                NotAuthorized();
-            });
-        } catch (e) {
-            console.error('CRASH init Player: ', e.message);
-            window.focus();
-        }
-    }
-
-    function OpenAuthDialog(photoSize, scopes) {
-        try {
-            ysdk.auth.openAuthDialog().then(() => {
-                InitPlayer(photoSize, scopes);
-            }).catch(() => {
-                InitSDK(photoSize, scopes);
-            });
-        } catch (e) {
-            console.log('CRASH Open Auth Dialog: ', e.message);
-        }
-    }
-
-    function FullAdShow() {
-        try {
-            window.ysdk.adv.showFullscreenAdv(
-                {
-                    callbacks: {
-                        onOpen: () => {
-                            console.log('Open Fullscreen Ad');
-                            myGameInstance.SendMessage('YandexGame', 'OpenFullAd');
-                        },
-                        onClose: (wasShown) => {
-                            if (wasShown) myGameInstance.SendMessage('YandexGame', 'CloseFullAd', 'true');
-                            else myGameInstance.SendMessage('YandexGame', 'CloseFullAd', 'false');
-                            window.focus();
-                        },
-                        onError: (error) => {
-                            console.error('Error Fullscreen Ad', error);
-                            myGameInstance.SendMessage('YandexGame', 'ErrorFullAd');
-                            window.focus();
-                        }
-                    }
-                });
-        } catch (e) {
-            console.error('CRASH FullAd Show: ', e.message);
-        }
-    }
-
-    function RewardedShow(id) {
-        try {
-            window.ysdk.adv.showRewardedVideo(
-                {
-                    callbacks:
-                    {
-                        onOpen: () => {
-                            console.log('Opened Video Ad. Id: ' + id);
-                            myGameInstance.SendMessage('YandexGame', 'OpenVideo');
-                        },
-                        onClose: () => {
-                            console.log('Closed Video Ad. Id: ' + id);
-                            myGameInstance.SendMessage('YandexGame', 'CloseVideo');
-                            window.focus();
-                        },
-                        onRewarded: () => {
-                            console.log('Reward Video Ad. Id: ' + id);
-                            myGameInstance.SendMessage('YandexGame', 'RewardVideo', id);
-                        },
-                        onError: (e) => {
-                            console.error('Error Video Ad. Id: ' + id, e);
-                            myGameInstance.SendMessage('YandexGame', 'ErrorVideo');
-                        }
-                    }
-                });
-        } catch (err) {
-            console.error('CRASH Rewarded Video Ad Show: ', err.message);
-        }
-    }
-
-    function StickyAdActivity(show) {
-        try {
-            ysdk.adv.getBannerAdvStatus().then(({ stickyAdvIsShowing, reason }) => {
-                if (stickyAdvIsShowing) {
-                    if (!show) {
-                        ysdk.adv.hideBannerAdv();
-                    }
-                }
-                else if (reason) {
-                    console.log('Sticky ad are not shown. Reason:', reason);
-                }
-                else if (show) {
-                    ysdk.adv.showBannerAdv();
-                }
-            })
-        } catch (e) {
-            console.error('CRASH Sticky Activity: ', e.message);
-        }
-    }
-
-    function InitPayments() {
-        try {
-            ysdk.getPayments().then(_payments => {
-                console.log('Purchases are available');
-                payments = _payments;                
-            }).catch(e => {
-                console.log('Purchases are not available', e.message);
-            })
-        } catch (e) {
-            console.error('CRASH Init Payments: ', e.message);
-        }
-    }
-
-    function BuyPayments(id) {
-        try {
-            if (payments != null) {
-                payments.purchase(id).then(purchase => {
-                    console.log('Purchase Success');
-                    myGameInstance.SendMessage('YandexGame', 'OnPurchaseSuccess', id);
-                    window.focus();
-                }).catch(e => {
-                    console.error('Purchase Failed', e.message);
-                    myGameInstance.SendMessage('YandexGame', 'OnPurchaseFailed', id);
-                    window.focus();
-                })
-            } else {
-                console.log('Payments == null');
             }
-        } catch (e) {
-            console.error('CRASH Buy Payments: ', e.message);
-            window.focus();
-        }
-    }
-    
-    function GetPayments() {
-        try {
-            if (payments != null) {
-                payments.getCatalog()
-                    .then(products => {
-                        let productID = [products.length];
-                        let title = [products.length];
-                        let description = [products.length];
-                        let imageURI = [products.length];
-                        let priceValue = [products.length];
-                        let purchased = [products.length];
-    
-                        for (i = 0; i < products.length; i++) {
-                            productID[i] = products[i].id;
-                            title[i] = products[i].title;
-                            description[i] = products[i].description;
-                            imageURI[i] = products[i].imageURI;
-                            priceValue[i] = products[i].priceValue;
-                            purchased[i] = 0;
-                        }
-    
-                        payments.getPurchases().then(purchases => {
-                            for (i1 = 0; i1 < products.length; i1++) {
-                                for (i2 = 0; i2 < purchases.length; i2++) {
-                                    if (products[i1].id === purchases[i2].productID){
-                                        purchased[i1]++;
+
+            window.getPlatformTld = function() {
+                let tld = bridge.platform.tld
+                if (typeof tld === 'string') {
+                    return tld
+                } else {
+                    return ''
+                }
+            }
+
+            window.sendMessageToPlatform = function(message) {
+                bridge.platform.sendMessage(message)
+            }
+
+
+            // device
+            window.getDeviceType = function() {
+                return bridge.device.type
+            }
+
+
+            // player
+            window.getIsPlayerAuthorizationSupported = function() {
+                return bridge.player.isAuthorizationSupported.toString()
+            }
+
+            window.getIsPlayerAuthorized = function() {
+                return bridge.player.isAuthorized.toString()
+            }
+
+            window.getPlayerId = function() {
+                if (bridge.player.id) {
+                    return bridge.player.id.toString()
+                }
+
+                return ''
+            }
+
+            window.getPlayerName = function() {
+                if (bridge.player.name) {
+                    return bridge.player.name.toString()
+                }
+
+                return ''
+            }
+
+            window.getPlayerPhotos = function() {
+                if (bridge.player.photos.length > 0) {
+                    return JSON.stringify(bridge.player.photos)
+                }
+
+                return ''
+            }
+
+            window.authorizePlayer = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.player.authorize(options)
+                    .then(() => {
+                        sendMessageToUnity('OnAuthorizeCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnAuthorizeCompleted', 'false')
+                    })
+            }
+
+
+            // game
+            window.getVisibilityState = function() {
+                return bridge.game.visibilityState
+            }
+
+
+            // storage
+            window.getStorageDefaultType = function() {
+                return bridge.storage.defaultType
+            }
+
+            window.getIsStorageSupported = function(storageType) {
+                return bridge.storage.isSupported(storageType).toString()
+            }
+
+            window.getIsStorageAvailable = function(storageType) {
+                return bridge.storage.isAvailable(storageType).toString()
+            }
+
+            window.getStorageData = function(key, storageType) {
+                let keys = key.split(STORAGE_KEYS_SEPARATOR)
+
+                bridge.storage.get(keys, storageType)
+                    .then(data => {
+                        if (keys.length > 1) {
+                            let values = []
+
+                            for (let i = 0; i < keys.length; i++) {
+                                let value = data[i]
+                                if (value) {
+                                    if (typeof value !== 'string') {
+                                        value = JSON.stringify(value)
                                     }
+
+                                    values.push(value)
+                                } else {
+                                    values.push('')
                                 }
                             }
-                        })
-                            .then(() => {
-                                var jsonPayments = {
-                                    "id": productID,
-                                    "title": title,
-                                    "description": description,
-                                    "imageURI": imageURI,
-                                    "priceValue": priceValue,
-                                    "purchased": purchased
-                                };
-                                myGameInstance.SendMessage('YandexGame', 'PaymentsEntries', JSON.stringify(jsonPayments));
-                            })
-                    });
-            }
-            else{
-                console.log('Get Payments: payments == null');
-            }
-        } catch (e) {
-            console.error('CRASH Get Payments: ', e.message);
-        }
-    }
 
-    function DeletePurchase(id) {
-        try {
-            if (payments != null) {
-                payments.getPurchases().then(purchases => {
-                    for(i = 0; i < purchases.length; i++){
-                        if (purchases[i].productID === id)
-                            payments.consumePurchase(purchases[i].purchaseToken);
-                    }
-                });
+                            sendMessageToUnity('OnGetStorageDataSuccess', `${key}${STORAGE_DATA_SEPARATOR}${values.join(STORAGE_VALUES_SEPARATOR)}`)
+                        } else {
+                            if (data[0]) {
+                                if (typeof data[0] !== 'string') {
+                                    data = JSON.stringify(data[0])
+                                }
+                            } else {
+                                data = ''
+                            }
+
+                            sendMessageToUnity('OnGetStorageDataSuccess', `${key}${STORAGE_DATA_SEPARATOR}${data}`)
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnGetStorageDataFailed', key)
+                    })
             }
-            else console.log('Delete Purchase: payments == null');
-        } catch (e) {
-            console.error('CRASH Delete Purchase: ', e.message);
-        }
-    }
 
-    function DeleteAllPurchases() {
-        try {
-            if (payments != null) {
-                payments.getPurchases().then(purchases => {
-                    for(i = 0; i < purchases.length; i++){
-                        payments.consumePurchase(purchases[i].purchaseToken);
-                    }
-                });
+            window.setStorageData = function(key, value, storageType) {
+                let keys = key.split(STORAGE_KEYS_SEPARATOR)
+                let values = value.split(STORAGE_VALUES_SEPARATOR)
+
+                bridge.storage.set(keys, values, storageType)
+                    .then(() => {
+                        sendMessageToUnity('OnSetStorageDataSuccess', key)
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnSetStorageDataFailed', key)
+                    })
             }
-            else console.log('Delete All Purchases: payments == null');
-        } catch (e) {
-            console.error('CRASH Delete All Purchases: ', e.message);
-        }
-    }
 
-    function SaveCloud(jsonData, flush) {
-        try {
-            player.setData({
-                saves: [jsonData],
-            }, flush);
-        } catch (e) {
-            console.error('CRASH Save Cloud: ', e.message);
-        }
-    }
+            window.deleteStorageData = function(key, storageType) {
+                let keys = key.split(STORAGE_KEYS_SEPARATOR)
 
-    function LoadCloud() {
-        try {
-            player.getData(["saves"]).then(data => {
-                if (data.saves) {
-                    myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', JSON.stringify(data.saves));
+                bridge.storage.delete(keys, storageType)
+                    .then(() => {
+                        sendMessageToUnity('OnDeleteStorageDataSuccess', key)
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnDeleteStorageDataFailed', key)
+                    })
+            }
+
+
+            // advertisement
+            window.getInterstitialState = function() {
+                if (bridge.advertisement.interstitialState) {
+                    return bridge.advertisement.interstitialState
                 } else {
-                    myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', "noData");
+                    return ''
                 }
-            }).catch(() => {
-                console.error('getData Error!');
-                myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', "noData");
-            });
-        } catch (e) {
-            console.error('CRASH Load saves Cloud: ', e.message);
-            myGameInstance.SendMessage('YandexGame', 'SetLoadSaves', "noData");
-        }
-    }
-
-    function InitLeaderboard() {
-        try {
-            ysdk.getLeaderboards().then(_lb => {
-                leaderboard = _lb
-                myGameInstance.SendMessage('YandexGame', 'InitializedLB');
-            });
-        } catch (e) {
-            console.error('CRASH Init Leaderboard: ', e.message);
-        }
-    }
-
-    function SetLeaderboardScores(_name, score) {
-        try {
-            ysdk.getLeaderboards()
-                .then(leaderboard => {
-                    leaderboard.setLeaderboardScore(_name, score);
-                });
-        } catch (e) {
-            console.error('CRASH Set Leader board Scores: ', e.message);
-        }
-    }
-
-    function GetLeaderboardScores(nameLB, maxPlayers, quantityTop, quantityAround, photoSize, auth) {
-        if (auth) {
-            try {
-                ysdk.getLeaderboards()
-                    .then(leaderboard => {
-                        leaderboard.getLeaderboardEntries('' + nameLB, {
-                            quantityTop: quantityTop,
-                            includeUser: true,
-                            quantityAround: quantityAround
-                        })
-                            .then(res => {
-                                EntriesLB(res, nameLB, maxPlayers, photoSize);
-                            });
-                    });
-            } catch (e) {
-                console.error('CRASH Get Leaderboard Scores: ', e.message);
-            }
-        } else {
-            try {
-                ysdk.getLeaderboards()
-                    .then(leaderboard => {
-                        leaderboard.getLeaderboardEntries('' + nameLB, {quantityTop: quantityTop})
-                            .then(res => {
-                                EntriesLB(res, nameLB, maxPlayers, photoSize);
-                            });
-                    });
-            } catch (e) {
-                console.error('CRASH Get Leaderboard Scores: ', e.message);
-            }
-        }
-    }
-
-    function EntriesLB(res, nameLB, maxPlayers, photoSize) {
-        let LeaderboardEntriesText = '';
-
-        let playersCount;
-        if (res.entries.length < maxPlayers) {
-            playersCount = res.entries.length;
-        } else {
-            playersCount = maxPlayers;
-        }
-
-        let rank = [maxPlayers];
-        let photo = [maxPlayers];
-        let playersName = [maxPlayers];
-        let scorePlayers = [maxPlayers];
-
-        for (i = 0; i < playersCount; i++) {
-            rank[i] = res.entries[i].rank;
-            scorePlayers[i] = res.entries[i].score;
-
-            if (photoSize === 'nonePhoto' || res.entries[i].player.scopePermissions.avatar !== "allow") {
-                photo[i] = 'nonePhoto';
-            } else {
-                photo[i] = res.entries[i].player.getAvatarSrc(photoSize);
             }
 
-            if (res.entries[i].player.scopePermissions.public_name !== "allow") {
-                playersName[i] = "anonymous";
-            } else {
-                playersName[i] = res.entries[i].player.publicName;
+            window.getIsBannerSupported = function() {
+                return bridge.advertisement.isBannerSupported.toString()
+            }
+            
+            window.getMinimumDelayBetweenInterstitial = function() {
+                return bridge.advertisement.minimumDelayBetweenInterstitial.toString()
             }
 
-            LeaderboardEntriesText += rank[i] + '. ' + playersName[i] + ": " + scorePlayers[i] + '\n';
-        }
+            window.setMinimumDelayBetweenInterstitial = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                } else {
+                    options = { }
+                }
+                
+                bridge.advertisement.setMinimumDelayBetweenInterstitial(options)
+            }
 
-        if (playersCount === 0) {
-            LeaderboardEntriesText = 'No data';
-        }
+            window.showBanner = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                } else {
+                    options = { }
+                }
 
-        let jsonLB = {
-            "nameLB": nameLB,
-            "entries": LeaderboardEntriesText,
-            "rank": rank,
-            "photo": photo,
-            "playersName": playersName,
-            "scorePlayers": scorePlayers
-        };
-        myGameInstance.SendMessage('YandexGame', 'LeaderboardEntries', JSON.stringify(jsonLB));
-    }
+                if (bridge.platform.id === bridge.PLATFORM_ID.CRAZY_GAMES || bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
+                    bannerContainer.style.display = 'block'
+                }
 
-    function LanguageRequest() {
-        try {
-            myGameInstance.SendMessage('YandexGame', 'SetLanguage', ysdk.environment.i18n.lang);
-        } catch (e) {
-            console.error('CRASH Language Request: ', e.message);
-        }
-    }
+                options['crazy_games'] = {
+                    containerId: 'banner-container'
+                }
 
-    function RequestingEnvironmentData() {
-        try {
-            let jsonEnvir = {
-                "language": ysdk.environment.i18n.lang,
-                "domain": ysdk.environment.i18n.tld,
-                "deviceType": ysdk.deviceInfo.type,
-                "isMobile": ysdk.deviceInfo.isMobile(),
-                "isDesktop": ysdk.deviceInfo.isDesktop(),
-                "isTablet": ysdk.deviceInfo.isTablet(),
-                "isTV": ysdk.deviceInfo.isTV(),
-                "appID": ysdk.environment.app.id,
-                "browserLang": ysdk.environment.browser.lang,
-                "payload": ysdk.environment.payload,
-                "promptCanShow": promptCanShow,
-                "reviewCanShow": reviewCanShow
-            };
-            myGameInstance.SendMessage('YandexGame', 'SetEnvironmentData', JSON.stringify(jsonEnvir));
-        } catch (e) {
-            console.error('CRASH Requesting Environment Data: ', e.message);
-        }
-    }
+                options['game_distribution'] = {
+                    containerId: 'banner-container'
+                }
 
-    function Review() {
-        try {
-            ysdk.feedback.canReview()
-                .then(({ value, reason }) => {
-                    if (value) {
-                        ysdk.feedback.requestReview().then(({feedbackSent}) => {
-                            console.log('feedbackSent ', feedbackSent);
-                            if (feedbackSent)
-                                myGameInstance.SendMessage('YandexGame', 'ReviewSent', 'true');
-                            else myGameInstance.SendMessage('YandexGame', 'ReviewSent', 'false');
-                            window.focus();
-                        })
-                    }
-                    else {
-                        console.log('reviewCanShow = false', reason)
-                        window.focus();
-                    }
-                })
-        } catch (e) {
-            console.error('CRASH Review: ', e.message);
-            window.focus();
-        }
-    }
+                bridge.advertisement.showBanner(options)
+            }
 
-    function PromptShow() {
-        try {
-            ysdk.shortcut.showPrompt()
-                .then(result => {
-                    console.log('Shortcut created?:', result);
-                    if (result.outcome === 'accepted') {
-                        console.log('Prompt Success');
-                        myGameInstance.SendMessage('YandexGame', 'OnPromptSuccess');
-                    }
-                    else {
-                        myGameInstance.SendMessage('YandexGame', 'OnPromptFail');
-                    }
-                    window.focus();
-                });
-        } catch (e) {
-            console.error('CRASH Prompt Show: ', e.message);
-            window.focus();
-        }
-    }
+            window.hideBanner = function() {
+                if (bridge.platform.id === bridge.PLATFORM_ID.CRAZY_GAMES || bridge.platform.id === bridge.PLATFORM_ID.GAME_DISTRIBUTION) {
+                    bannerContainer.style.display = 'none'
+                }
 
-    function PaintRBT(rbt) {
-        try {
-            document.getElementById(rbt).style.background = '#ff0000';
-        } catch (e) {
-            console.error('CRASH Paint RBT: ', e.message);
-        }
-    }
+                bridge.advertisement.hideBanner()
+            }
 
-    function StaticRBTDeactivate() {
-    }
+            window.showInterstitial = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
 
-    document.body.appendChild(script);
-</script>
+                bridge.advertisement.showInterstitial(options)
+            }
+
+            window.showRewarded = function() {
+                bridge.advertisement.showRewarded()
+            }
+
+
+            // social
+            window.getIsShareSupported = function() {
+                return bridge.social.isShareSupported.toString()
+            }
+
+            window.getIsInviteFriendsSupported = function() {
+                return bridge.social.isInviteFriendsSupported.toString()
+            }
+
+            window.getIsJoinCommunitySupported = function() {
+                return bridge.social.isJoinCommunitySupported.toString()
+            }
+
+            window.getIsCreatePostSupported = function() {
+                return bridge.social.isCreatePostSupported.toString()
+            }
+
+            window.getIsAddToHomeScreenSupported = function() {
+                return bridge.social.isAddToHomeScreenSupported.toString()
+            }
+
+            window.getIsAddToFavoritesSupported = function() {
+                return bridge.social.isAddToFavoritesSupported.toString()
+            }
+
+            window.getIsRateSupported = function() {
+                return bridge.social.isRateSupported.toString()
+            }
+
+            window.getIsExternalLinksAllowed = function() {
+                return bridge.social.isExternalLinksAllowed.toString()
+            }
+
+            window.share = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.social.share(options)
+                    .then(() => {
+                        sendMessageToUnity('OnShareCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnShareCompleted', 'false')
+                    })
+            }
+
+            window.inviteFriends = function() {
+                bridge.social.inviteFriends()
+                    .then(() => {
+                        sendMessageToUnity('OnInviteFriendsCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnInviteFriendsCompleted', 'false')
+                    })
+            }
+
+            window.joinCommunity = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.social.joinCommunity(options)
+                    .then(() => {
+                        sendMessageToUnity('OnJoinCommunityCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnJoinCommunityCompleted', 'false')
+                    })
+            }
+
+            window.createPost = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.social.createPost(options)
+                    .then(() => {
+                        sendMessageToUnity('OnCreatePostCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnCreatePostCompleted', 'false')
+                    })
+            }
+
+            window.addToHomeScreen = function() {
+                bridge.social.addToHomeScreen()
+                    .then(() => {
+                        sendMessageToUnity('OnAddToHomeScreenCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnAddToHomeScreenCompleted', 'false')
+                    })
+            }
+
+            window.addToFavorites = function() {
+                bridge.social.addToFavorites()
+                    .then(() => {
+                        sendMessageToUnity('OnAddToFavoritesCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnAddToFavoritesCompleted', 'false')
+                    })
+            }
+
+            window.rate = function() {
+                bridge.social.rate()
+                    .then(() => {
+                        sendMessageToUnity('OnRateCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnRateCompleted', 'false')
+                    })
+            }
+
+
+            // leaderboard
+            window.getIsLeaderboardSupported = function() {
+                return bridge.leaderboard.isSupported.toString()
+            }
+
+            window.getIsLeaderboardNativePopupSupported = function() {
+                return bridge.leaderboard.isNativePopupSupported.toString()
+            }
+
+            window.getIsLeaderboardMultipleBoardsSupported = function() {
+                return bridge.leaderboard.isMultipleBoardsSupported.toString()
+            }
+
+            window.getIsLeaderboardSetScoreSupported = function() {
+                return bridge.leaderboard.isSetScoreSupported.toString()
+            }
+
+            window.getIsLeaderboardGetScoreSupported = function() {
+                return bridge.leaderboard.isGetScoreSupported.toString()
+            }
+
+            window.getIsLeaderboardGetEntriesSupported = function() {
+                return bridge.leaderboard.isGetEntriesSupported.toString()
+            }
+
+            window.leaderboardSetScore = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.leaderboard.setScore(options)
+                    .then(() => {
+                        sendMessageToUnity('OnLeaderboardSetScoreCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnLeaderboardSetScoreCompleted', 'false')
+                    })
+            }
+
+            window.leaderboardGetScore = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.leaderboard.getScore(options)
+                    .then(data => {
+                        if (data) {
+                            if (typeof data !== 'string') {
+                                data = JSON.stringify(data)
+                            }
+
+                            sendMessageToUnity('OnLeaderboardGetScoreCompleted', data)
+                        } else {
+                            sendMessageToUnity('OnLeaderboardGetScoreCompleted', '')
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnLeaderboardGetScoreCompleted', 'false')
+                    })
+            }
+
+            window.leaderboardGetEntries = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.leaderboard.getEntries(options)
+                    .then(data => {
+                        if (data) {
+                            if (typeof data !== 'string') {
+                                data = JSON.stringify(data)
+                            }
+
+                            sendMessageToUnity('OnLeaderboardGetEntriesCompletedSuccess', data)
+                        } else {
+                            sendMessageToUnity('OnLeaderboardGetEntriesCompletedSuccess', '')
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnLeaderboardGetEntriesCompletedFailed', 'false')
+                    })
+            }
+
+            window.leaderboardShowNativePopup = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                }
+
+                bridge.leaderboard.showNativePopup(options)
+                    .then(() => {
+                        sendMessageToUnity('OnLeaderboardShowNativePopupCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnLeaderboardShowNativePopupCompleted', 'false')
+                    })
+            }
+
+            window.getIsPaymentsSupported = function() {
+                return bridge.payments.isSupported.toString()
+            }
+
+            window.paymentsPurchase = function(purchaseId) {
+                bridge.payments.purchase(purchaseId)
+                    .then(() => {
+                        sendMessageToUnity('OnPaymentsPurchaseCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsPurchaseCompleted', 'false')
+                    })
+            }
+
+            window.paymentsConsumePurchase = function(purchaseToken) {
+                bridge.payments.consumePurchase(purchaseToken)
+                    .then(() => {
+                        sendMessageToUnity('OnPaymentsConsumePurchaseCompleted', 'true')
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsConsumePurchaseCompleted', 'false')
+                    })
+            }
+
+            window.paymentsGetCatalog = function() {
+                bridge.payments.getCatalog()
+                    .then(data => {
+                        if (data) {
+                            if (typeof data !== 'string') {
+                                data = JSON.stringify(data)
+                            }
+
+                            data = data.replaceAll('imageURI', 'icon')
+
+                            sendMessageToUnity('OnPaymentsGetCatalogCompletedSuccess', data)
+                        } else {
+                            sendMessageToUnity('OnPaymentsGetCatalogCompletedSuccess', '')
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsGetCatalogCompletedFailed', 'false')
+                    })
+            }
+
+            window.paymentsGetPurchases = function() {
+                bridge.payments.getPurchases()
+                    .then(data => {
+                        if (data) {
+                            if (typeof data !== 'string') {
+                                data = JSON.stringify(data)
+                            }
+
+                            data = data.replaceAll('productID', 'id')
+                            data = data.replaceAll('purchaseToken', 'token')
+
+                            sendMessageToUnity('OnPaymentsGetPurchasesCompletedSuccess', data)
+                        } else {
+                            sendMessageToUnity('OnPaymentsGetPurchasesCompletedSuccess', '')
+                        }
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnPaymentsGetPurchasesCompletedFailed', 'false')
+                    })
+            }
+
+            window.getIsRemoteConfigSupported = function() {
+                return bridge.remoteConfig.isSupported.toString()
+            }
+
+            window.remoteConfigGet = function(options) {
+                if (options) {
+                    options = JSON.parse(options)
+                } else {
+                    options = { clientFeatures: [] }
+                }
+
+                bridge.remoteConfig.get(options)
+                    .then(data => {
+                        let keys = Object.keys(data)
+                        let values = []
+
+                        for (let i = 0; i < keys.length; i++) {
+                            let name = keys[i]
+                            let value = data[name]
+                            values.push({ name, value })
+                        }
+
+                        sendMessageToUnity('OnRemoteConfigGetSuccess', JSON.stringify(values))
+                    })
+                    .catch(error => {
+                        sendMessageToUnity('OnRemoteConfigGetFailed', '')
+                    })
+            }
+        </script>
 </body>
 </html>

@@ -101,17 +101,6 @@
         });
     };
 
-    function InitSDK(photoSize, scopes) {
-        console.log('Init GAME');
-        initGame = false;
-        photoSizeForInit = photoSize;
-        scopesForInit = scopes;
-
-        if (initSDK == true) {
-            ysdk.features.LoadingAPI?.ready();
-            InitPlayer(photoSize, scopes);
-        }
-    }
 
     function NotAuthorized() {
         try {

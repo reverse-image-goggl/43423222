@@ -4,26 +4,26 @@
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
     <title>Game</title>
-    <link rel="shortcut icon" href="https://www.dropbox.com/scl/fi/4337334urxsxvosvbi9d9/favicon.ico?rlkey=62jt6b2ylmsbgd4vsgrfi42ik&st=3ooipc8i&dl=1"/>
-    <link rel="stylesheet" href="https://www.dropbox.com/scl/fi/sgb2stzeft5ehrftb3qz4/style.css?rlkey=3y5y37cv6uon2ur4j7p8lsyk8&st=803ixieq&dl=1"/>
-    <script src="https://www.dropbox.com/scl/fi/95tc7m66mkuqnzjbch7je/UnityProgress.js?rlkey=z5ejoh8bzglw7eilje8f2p8wj&st=b4z9udmx&dl=1"></script>
-    <script src="https://www.dropbox.com/scl/fi/04c4ogs13req2brn9uksb/UnityLoader.js?rlkey=xkberz7q2z1db6gg1ipaq30vi&st=1lito0k0&dl=1"></script>
-    <script type="text/javascript">
+    <link rel="shortcut icon" href="https://www.dropbox.com/scl/fi/4337334urxsxvosvbi9d9/favicon.ico?rlkey=62jt6b2ylmsbgd4vsgrfi42ik&amp;st=3ooipc8i&amp;dl=1"/>
+    <link rel="stylesheet" href="https://www.dropbox.com/scl/fi/sgb2stzeft5ehrftb3qz4/style.css?rlkey=3y5y37cv6uon2ur4j7p8lsyk8&amp;st=803ixieq&amp;dl=1"/>
+    <script src="https://www.dropbox.com/scl/fi/95tc7m66mkuqnzjbch7je/UnityProgress.js?rlkey=z5ejoh8bzglw7eilje8f2p8wj&amp;st=b4z9udmx&amp;dl=1"></script>
+    <script src="https://www.dropbox.com/scl/fi/04c4ogs13req2brn9uksb/UnityLoader.js?rlkey=xkberz7q2z1db6gg1ipaq30vi&amp;st=1lito0k0&amp;dl=1"></script>
+    <script>
       function FitScreen() {
         var w = 960;
         var h = 600;
         var availWidth = window.innerWidth;
         var availHeight = window.innerHeight - 10;
 
-        var canvas = document.getElementById("canvas");
+        var canvas = document.getElementById("#canvas");
         if (availWidth / availHeight > w / h) {
-          var height = availHeight;
-          var width = (height * w) / h;
+          height = availHeight;
+          width = (height * w) / h;
         } else {
-          var width = availWidth;
-          var height = (width * h) / w;
+          width = availWidth;
+          height = (width * h) / w;
         }
 
         canvas.width = width;
@@ -34,23 +34,26 @@
       }
 
       function InitExternEval(_appId) {
-        console.log("YandexInitExternEval " + _appId);
+        console.log('YandexInitExternEval ' + _appId);
 
-        YaGames.init().then((ysdk_) => {
+        YaGames.init().then(ysdk_ => {
           window.ysdk = ysdk_;
           window.ysdk.adv.showFullscreenAdv({
             callbacks: {
-              onClose: function() {
-                gameInstance.SendMessage("YandexAPI", "AdMessage", "onClose");
+              onClose: function () {
+                gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onClose');
               },
-              onOpen: function() {
-                gameInstance.SendMessage("YandexAPI", "AdMessage", "onOpen");
+
+              onOpen: function () {
+                gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onOpen');
               },
-              onError: function() {
-                gameInstance.SendMessage("YandexAPI", "AdMessage", "onError");
+
+              onError: function () {
+                gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onError');
               },
-              onOffline: function() {
-                gameInstance.SendMessage("YandexAPI", "AdMessage", "onOffline");
+
+              onOffline: function () {
+                gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onOffline');
               }
             }
           });
@@ -58,29 +61,32 @@
       }
 
       function ExternEval() {
-        console.log("YandexExternEval");
+        console.log('YandexExternEval');
 
-        gameInstance.SendMessage("YandexAPI", "AdMessage", "CallAd");
+        gameInstance.SendMessage('YandexAPI', 'AdMessage', 'CallAd');
 
         window.ysdk.adv.showFullscreenAdv({
           callbacks: {
-            onClose: function() {
-              gameInstance.SendMessage("YandexAPI", "AdMessage", "onClose");
+            onClose: function () {
+              gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onClose');
             },
-            onOpen: function() {
-              gameInstance.SendMessage("YandexAPI", "AdMessage", "onOpen");
+
+            onOpen: function () {
+              gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onOpen');
             },
-            onError: function() {
-              gameInstance.SendMessage("YandexAPI", "AdMessage", "onError");
+
+            onError: function () {
+              gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onError');
             },
-            onOffline: function() {
-              gameInstance.SendMessage("YandexAPI", "AdMessage", "onOffline");
+
+            onOffline: function () {
+              gameInstance.SendMessage('YandexAPI', 'AdMessage', 'onOffline');
             }
           }
         });
       }
 
-      var gameInstance = UnityLoader.instantiate("gameContainer", "https://www.dropbox.com/scl/fi/6t8u21g20lnx0lyu738q1/game.json?rlkey=2lupxlsm8syp7rj7ivfemqamk&st=bvrpetfk&dl=1", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "https://www.dropbox.com/scl/fi/6t8u21g20lnx0lyu738q1/game.json?rlkey=2lupxlsm8syp7rj7ivfemqamk&amp;st=bvrpetfk&amp;dl=1", { onProgress: UnityProgress });
     </script>
   </head>
   <body onfocus="FitScreen();" onload="FitScreen();" onresize="FitScreen();">

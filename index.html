@@ -40,13 +40,4 @@
                     cb && cb(params);
                 }
             };
-            YaGames.init()
-                .then(function(yasdk) {
-                    b.params = b.params || {};
-                    b.params.yasdk = yasdk;
-                    b.onLoaded(yasdk);
-                })
-                .catch(function(e) {
-                    console.error(e);
-                });
         })(window.__diffbus = {ready: false, cbc: [], params: undefined});</script><script defer="defer" src="main.js"></script><link href="main.css" rel="stylesheet"/></head><body><div id="game-root"><canvas id="game-canvas"></canvas></div></body></html>

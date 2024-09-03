@@ -14,14 +14,7 @@
 	
 	
 	<script type="text/javascript" src="./PsychEngine.js"></script>
-	
-	<script>
-		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
-		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
-			var meta = document.getElementById ("viewport");
-			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
-		}
-	</script>
+
 	
 	<style>
 		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
@@ -66,16 +59,9 @@
 	
 </head>
 <body>
-	
-	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
-	
+		
 	<div id="openfl-content"></div>
 	
-	<script type="text/javascript">
-		lime.embed ("PsychEngine", "openfl-content", 1280, 720, { parameters: {} });
-	</script>
-	<script>joinUrl = "vs-huggy-wuggy";</script>
-	<script src="sk.min.js?010722"></script>
 	
 </body>
 </html>

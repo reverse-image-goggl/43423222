@@ -4,17 +4,26 @@
 	
 	<meta charset="utf-8">
 	
-	<title>Friday Night Funkin': Huggy Wuggy</title>
-	
+	<title>FNF vs Huggy Wuggy (Poppy Playtime)</title>
+	<link rel="canonical" href="https://kbhgames.com/game/friday-night-funkin-vs-huggy-wuggy-poppy-playtime"/>
+
+
 	<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="canonical" href="https://www.snokido.com/game/vs-huggy-wuggy" />
+	
 	
 	<link rel="shortcut icon" type="image/png" href="./favicon.png">
 	
 	
 	<script type="text/javascript" src="./PsychEngine.js"></script>
-
+	
+	<script>
+		window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+		if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+			var meta = document.getElementById ("viewport");
+			meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+		}
+	</script>
 	
 	<style>
 		html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
@@ -55,13 +64,26 @@
 			font-style: normal;
 		}
 
+body{background-color:#000;}
+		#playmore {text-align: center;}
+		#playmore a{color: #fff;}
 	</style>
 	
 </head>
 <body>
-		
+		<script type="text/javascript">
+		 
+	</script>
+	<noscript>This webpage makes extensive use of JavaScript. Please enable JavaScript in your web browser to view this page.</noscript>
+	
 	<div id="openfl-content"></div>
 	
 	
+	<script type="text/javascript">
+		lime.embed ("PsychEngine", "openfl-content", 1280, 720, { parameters: {} });
+	</script>
+	
+<link rel="stylesheet" href="/assets/css.css" type="text/css" media="all"/>
+<script type="text/javascript" src="/assets/js.js"></script>
 </body>
 </html>

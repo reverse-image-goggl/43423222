@@ -1,0 +1,2 @@
+<h2>Unblocked Games at <a href="https://sites.google.com/view/googl-games/">Unblocked Games</a></h2>
+<p>Discover a vast selection of <strong>Unblocked Games</strong> at <a href="https://sites.google.com/view/googl-games/">Unblocked Games</a>. Whether you're looking to play during breaks or after school, our platform provides access to a variety of games that are fun, engaging, and completely unblocked. Click the link to enjoy top-rated games with no restrictions, accessible from anywhere, anytime.</p>
